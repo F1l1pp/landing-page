@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Обзор JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/facivon.png">
+</head>
+<body>
+<main class="main">
+    <div class="container">
+        <h1 class="title">
+            Обзор JavaScript
+        </h1>       
+
+        <div class="content">
+            <h2>Оглавление</h2>
+
+            <ul class="ul">
+                <li class="list" >
+                    <a href="#subtitle" class="list-link">Введение</a></li>
+                <li class="list">
+                    <a href="#ECMAScript" class="list-link">JavaScript, базовый язык программирования (ECMAScript)</a>
+                </li>
+            </ul>
+
+            <li class="list-two">
+                <a href="#ECMAScript-subtitle" class="list-link">
+                    Что попадает под понятие ECMAScript?
+                </a>
+            </li>
+            <li class="list-two">
+                <a href="#browser-support" class="list-link">
+                    Браузерная поддержка
+                </a>
+            </li>
+            <li class="list-two">
+                <a href="#future" class="list-link">
+                    Будущее
+                </a>
+            </li>
+     <ul class="ul">
+            <li>
+                <a href="#core" class="list-link">
+                    Ядро DOM
+                </a>
+            </li>
+     </ul>
+        </div>
+     
+   
+ 
+        <article class="article">
+            <h2 id="subtitle">Введение</h2>
+                <p>
+                    Если HTML определяет структуру и контент веб-страницы, а CSS задаёт формат и внешний вид, то JavaScript добавляет интерактивность и создаёт богатые веб-приложения. 
+                </p>
+        </article>
+        <article class="article">
+            <h2 id="ECMAScript">JavaScript, базовый язык программирования (ECMAScript)</h2>
+            <p>
+                Базовый язык JavaScript стандартизирован комитетом ECMA TC-39 как язык программирования под названием <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources" >ECMAScript</a>
+            </p>
+                <img src="img/EcmaScript.jpg" alt="ECMAScript" class="aticle-img">
+                <p class="signature">ECMAScript</p>
+
+            <p>
+                Базовый язык также используется в не-браузерном окружении, например, в <a href="https://nodejs.org/en/">Node.js</a>
+            </p>
+            <h3 id="ECMAScript-subtitle">Что попадает под понятие ECMAScript?</h3>
+            <p>
+                Кроме прочего, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources">ECMAScript</a> определяет
+            </p>
+
+            <ul>
+                <li class="list">Синтаксис языка (правила парсинга, ключевые слова, порядок выполнения, инициализацию объекта литерала...)</li>
+                <li class="lsit">Механизм обработки ошибок (исключения, try/catch оператор,возможность создавать новые типы  ошибок)
+                </li>
+                <li class="list">Типы данных (логические, числа, строки, функции, объекты...)
+                </li>
+                <li class="list">Глобальный объект. В браузерах глобальным объектом является window, но ECMAscript определяет только те APIs, которые не являются специфическими для браузера, как <code>parseInt</code>, <code>parseFloat</code>, <code>decodeURI</code>, <code>encodeURI...</code>
+                </li>
+                <li class="list">Механизм прототипного наследования
+                </li>
+                <li class="list">Встроенные объекты и функции (JSON, Math, Array.prototype методы, методы самоанализа объекта...)
+                </li>
+                <li class="list list-end">
+                    Строгий режим
+                </li>
+            </ul>
+            <h3 id="browser-support">Браузерная поддержка</h3>
+            <p>
+                Tекущие версии основы веб-браузеров включали <a href="https://262.ecma-international.org/5.1/">ECMAScript 5.1</a> и <a href="https://262.ecma-international.org/6.0/">ECMAScript 2015</a>, но более старые версии (все ещё находящиеся в использовании) реализуют только ECMAScript 5.
+            </p>
+             <h3 id="future">Будущее</h3>
+             <p>
+                 Главное 6-ое издание ECMAscript было официально одобрено и опубликовано как стандарт 17 июня 2015 года на собрании ECMA General Assembly. С тех пор выпуски ECMAscript публикуются на ежегодной основе.
+            </p>
+        </article>
+        <article>
+            <h2 id="DOM">DOM APIs</h2>
+            <h3>WebIDL</h3>
+            <p>
+                <a href="https://dev.w3.org/2006/webapi/WebIDL/">Спецификация WebIDL</a>
+                является связующим звеном между технологиями DOM и ECMAScript.
+            </p>
+            <h3 id="core">Ядро DOM</h3>
+            <p>
+                Объектно-ориентированная модель документа (DOM) это кросс-платформенное, языково-независимое соглашение по представлению объектов и взаимодействию с ними в документах HTML, XHTML и XML. Объект в DOM-дереве может быть адресован и обработан с помощью своих методов. Ядро Объектно-ориентированной модели документа стандартизируется W3C и определяет языково-независимые интерфейсы, абстрагирующие HTML и XML документы как объекты, и механизмы для управления этой абстракцией. Кроме прочих вещей, опряденных в DOM, можно также найти:
+            </p>
+            <ul>
+                <li class="list">Структуру документа, древовидную модель, и архитектуру событий DOM в <a href="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html" class="link"></a>ядре DOM</li>
+                <li class="list">Менее строгое определение архитектуры событий DOM, также как и определённые <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/JavaScript_technologies_overview#%D0%B1%D1%83%D0%B4%D1%83%D1%89%D0%B5%D0%B5" class="link">события DOM</a></li>
+                <li class="list">Другие вещи, такие как <a href="https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html" class="link">DOM Traversal</a> и <a href="https://html5.org/specs/dom-range.html">DOM Range</a></li>
+            </ul>
+
+            <p>
+                С точки зрения ECMAScript, объекты определённые в спецификации DOM называются объектами среды исполнения ("host objects").
+            </p>
+        </article>
+      
+        <a href="#" class="arrowUp">
+            ↑
+         </a>
+    </div>
+</main>
+
+</body>
+</html>
